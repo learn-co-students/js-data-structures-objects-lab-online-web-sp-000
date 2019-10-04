@@ -6,13 +6,14 @@ function updateDriverWithKeyAndValue(driver, key, value) {
     // returns a driver with the original key value pairs
     // and the new key value pair
 
-    // it does not modify the original driver,
-    // but rather returns a clone with the new data
-
     return Object.assign({}, driver, { [key]: value });
 
     // or with ES6 you can use spread...
     return { ...driver, ...{ [key]: value } };
+
+    // NOTE:
+    // it does not modify the original driver,
+    // but rather returns a clone with the new data
 
 }
 
