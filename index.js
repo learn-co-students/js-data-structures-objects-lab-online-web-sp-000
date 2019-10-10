@@ -1,25 +1,27 @@
-// Write your solution in this file!
-const driver = {}
+var recipes = {};
 
-function updateDriverWithKeyAndValue(object, key, value) {
-  // driver.assign(street: '11 Broadway')
-  return Object.assign({}, object, {[key]: value});
+ function updateObjectWithKeyAndValue(object, key, value) {
+
+    return Object.assign({}, object, { [key]: value }) ; 
+
 }
 
-function destructivelyUpdateDriverWithKeyAndValue(object, key, value){
-  object[key] = value;
-  return object
-}
 
-function deleteFromDriverByKey(object, key){
-  const newObject = Object.assign({}, object);
+function deleteFromObjectByKey(object, key) {
 
-  delete newObject[key];
-  return newObject
-}
+    var newObj = Object.assign({}, key ) ; 
+    delete newObj.key ;
+    return newObj ; 
+    }
 
-function destructivelyDeleteFromDriverByKey(object, key){
-  delete object[key]
-  return object
-}
-// const newDriver = updateDriverWithKeyAndValue(driver, 'key', 'value')
+
+function destructivelyUpdateObjectWithKeyAndValue(object, key, value)
+    {
+         object[key] = value ;
+         return object ; 
+    }
+
+function destructivelyDeleteFromObjectByKey(object, key) {
+
+  delete object[key] ;
+  return object ; 
