@@ -14,9 +14,9 @@ function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
 }
 
 function deleteFromDriverByKey(driver, key) {
-  let streamlinedDriver = Object.assign({}, driver);
-  delete streamlinedDriver[key];
-  return streamlinedDriver;
+  let newDriver = Object.assign({}, driver);
+  delete newDriver[key];
+  return newDriver;
 }
 
 function destructivelyDeleteFromDriverByKey(driver, key) {
