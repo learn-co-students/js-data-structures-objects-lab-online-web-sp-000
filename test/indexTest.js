@@ -54,7 +54,7 @@ describe('drivers', function() {
   describe('destructivelyDeleteFromDriverByKey(driver, key)', function () {
     it('returns driver without the delete key/value pair', function () {
       let newdriver = destructivelyDeleteFromDriverByKey(driver, 'name');
-
+      console.log(newdriver)
       expect(newdriver['name']).to.equal(undefined);
     });
 
