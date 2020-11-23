@@ -1,5 +1,5 @@
 // Write your solution in this file!
-var driver = []
+var driver = {}
 
 function updateDriverWithKeyAndValue(obj, key, value){
     const newObj = {...obj};
