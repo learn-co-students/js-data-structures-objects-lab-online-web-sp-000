@@ -11,13 +11,12 @@ function destructivelyUpdateDriverWithKeyAndValue(obj, key, value) {
 }
 
 function deleteFromDriverByKey(driver, key) {
-    let copyObject = driver;
-    console.log("QUick");
-    console.log(driver);
+    let copyObject = Object.assign({}, driver);
     delete copyObject[key];
-    return driver;
+    return copyObject;
 }
 
 function destructivelyDeleteFromDriverByKey(driver, key) {
-
+    delete driver[key];
+    return driver;
 }
