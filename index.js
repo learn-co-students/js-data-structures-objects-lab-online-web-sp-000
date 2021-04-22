@@ -1,8 +1,24 @@
-const driver = {
+const driver = {};
 
+function updateDriverWithKeyAndValue(driver, key, value) {
+    const newDriver = {...driver};
+    newDriver[key] = value;
+    return newDriver;
+};
+function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
+    const newDriver = driver;
+    newDriver[key] = value;
+    return newDriver;
 };
 
-let updateDriverWithKeyAndValue = (driver, key, value) = {};
-let destructivelyUpdateDriverWithKeyAndValue = (driver, key, value) = {};
-let deleteFromDriverByKey = (driver, key) = {};
-let destructivelyDeleteFromDriverByKey = (driver, key) = {};
+function deleteFromDriverByKey(driver, key) {
+    const newDriver = {...driver};
+    delete newDriver[key];
+    return newDriver; 
+};
+
+function destructivelyDeleteFromDriverByKey(driver, key) {
+    const newDriver = driver;
+    delete newDriver[key];
+    return newDriver;
+};
